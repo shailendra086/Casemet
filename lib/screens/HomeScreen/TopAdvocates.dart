@@ -1,5 +1,6 @@
 import 'dart:convert'; // Import this for JSON decoding
 import 'package:casemet/provider/theme.dart';
+import 'package:casemet/screens/HomeScreen/TopAdvocate.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // Import this for rootBundle
 import 'package:provider/provider.dart';
@@ -67,10 +68,10 @@ class _TopAdvocatesState extends State<TopAdvocates> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            // Navigator.of(context).push(
-                            //   MaterialPageRoute(
-                            //       builder: (context) => const TopAdvocate()),
-                            // );
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) => const TopAdvocate()),
+                            );
                           },
                           child: Card(
                             elevation: 2,

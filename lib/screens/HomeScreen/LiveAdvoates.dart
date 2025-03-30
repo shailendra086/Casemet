@@ -1,4 +1,5 @@
 import 'package:casemet/provider/theme.dart';
+import 'package:casemet/screens/HomeScreen/LiveWakeels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // For rootBundle
 
@@ -44,12 +45,11 @@ class _LiveAdvocatesState extends State<LiveAdvocates> {
   }
 
   void _onImageTap(String advocateName) {
-    // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(
-    //     builder: (context) => LiveWakeels(),
-    //   ),
-    // );
+    Navigator.pushNamed(
+      context,
+      '/live',
+      arguments: advocateName,
+    );
     print('Tapped on $advocateName');
   }
 
