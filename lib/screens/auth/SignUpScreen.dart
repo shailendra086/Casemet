@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'package:casemet/screens/LoginScreen.dart';
-import 'package:casemet/screens/alert.dart';
+import 'package:casemet/screens/auth/LoginScreen.dart';
+import 'package:casemet/screens/alertmessage/alert.dart';
 import 'package:casemet/services/auth_service.dart';
 import 'package:casemet/services/notification_service.dart';
-import 'package:casemet/toaster/toast.dart';
+import 'package:casemet/screens/toaster/toast.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';

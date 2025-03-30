@@ -1,5 +1,5 @@
-import 'package:casemet/screens/alert.dart';
-import 'package:casemet/toaster/toast.dart';
+import 'package:casemet/screens/alertmessage/alert.dart';
+import 'package:casemet/screens/toaster/toast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

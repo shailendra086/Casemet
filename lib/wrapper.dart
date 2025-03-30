@@ -1,5 +1,5 @@
 import 'package:casemet/screens/auth/CasemetOnboarding.dart';
-import 'package:casemet/screens/LoginScreen.dart';
+import 'package:casemet/screens/auth/LoginScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

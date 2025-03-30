@@ -1,9 +1,9 @@
-import 'package:casemet/screens/ForgotScreen.dart';
-import 'package:casemet/screens/SignUpScreen.dart';
-import 'package:casemet/screens/alert.dart';
+import 'package:casemet/screens/auth/ForgotScreen.dart';
+import 'package:casemet/screens/auth/SignUpScreen.dart';
+import 'package:casemet/screens/alertmessage/alert.dart';
 import 'package:casemet/services/auth_service.dart';
 import 'package:casemet/services/notification_service.dart';
-import 'package:casemet/toaster/toast.dart';
+import 'package:casemet/screens/toaster/toast.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';

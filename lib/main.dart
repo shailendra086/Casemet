@@ -1,8 +1,8 @@
 import 'package:casemet/provider/theme.dart';
-import 'package:casemet/screens/ForgotScreen.dart';
-import 'package:casemet/screens/LoginScreen.dart';
-import 'package:casemet/screens/Notification.dart';
-import 'package:casemet/screens/SplashScreen.dart';
+import 'package:casemet/screens/auth/ForgotScreen.dart';
+import 'package:casemet/screens/auth/LoginScreen.dart';
+import 'package:casemet/screens/notifications/Notification.dart';
+import 'package:casemet/screens/auth/SplashScreen.dart';
 import 'package:casemet/services/notification_service.dart';
 import 'package:casemet/wrapper.dart';
 import 'package:flutter/material.dart';
