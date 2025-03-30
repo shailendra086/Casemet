@@ -76,7 +76,7 @@ class _SplashScreenState extends State<SplashScreen>
             ),
             const SizedBox(height: 8),
             const Text(
-              'हर किसी को मिले न्याय का अधिकार – ऑनलाइन कचहरी के साथ!',
+              'हर किसी को मिले न्याय का अधिकार – Casemet के साथ!',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,

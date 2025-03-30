@@ -56,7 +56,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
                       ),
                       const SizedBox(height: 8),
                       const Text(
-                        'Online Kachehari',
+                        'Casemet',
                         style: TextStyle(
                           fontSize: 26,
                           color: Colors.white,

@@ -153,9 +153,8 @@ class _NotificationPageState extends State<NotificationPage> {
           setState(() => _selectedIndex = index);
           switch (index) {
             case 0:
-            // Navigator.push(
-            //     context, MaterialPageRoute(builder: (context) => HomePage()));
-            // break;
+              Navigator.pushNamed(context, '/home');
+              break;
             case 1:
             // Navigator.push(context,
             //     MaterialPageRoute(builder: (context) => const FeedsPage()));

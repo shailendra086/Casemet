@@ -1,7 +1,8 @@
 import 'package:casemet/provider/theme.dart';
+import 'package:casemet/screens/HomeScreen/HomeScreen.dart';
 import 'package:casemet/screens/auth/ForgotScreen.dart';
 import 'package:casemet/screens/auth/LoginScreen.dart';
-import 'package:casemet/screens/notifications/Notification.dart';
+import 'package:casemet/screens/HomeScreen/Notification.dart';
 import 'package:casemet/screens/auth/SplashScreen.dart';
 import 'package:casemet/services/notification_service.dart';
 import 'package:casemet/wrapper.dart';
@@ -44,6 +45,7 @@ class _MyAppState extends State<MyApp> {
         '/login': (context) => const LoginScreen(),
         '/notification': (context) => const NotificationPage(),
         '/forget': (context) => const ForgotScreen(),
+        '/home': (context) => const HomeScreen(),
       },
       // home: const SplashScreen(),
     );

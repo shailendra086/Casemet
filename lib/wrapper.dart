@@ -1,3 +1,4 @@
+import 'package:casemet/screens/HomeScreen/HomeScreen.dart';
 import 'package:casemet/screens/auth/CasemetOnboarding.dart';
 import 'package:casemet/screens/auth/LoginScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -33,8 +34,7 @@ class Wrapper extends StatelessWidget {
           }
 
           // If user is logged in, show HomePage
-          return const LoginScreen();
-          // HomePage();
+          return const HomeScreen();
         },
       ),
     );

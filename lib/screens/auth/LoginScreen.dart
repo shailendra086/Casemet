@@ -181,11 +181,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const ForgotScreen(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/forget');
                         },
                         child: const Text(
                           'Forgot password?',
@@ -470,9 +466,10 @@ class _LoginScreenState extends State<LoginScreen> {
           );
 
           // Navigate to HomePage
-          // Navigator.of(context).pushReplacement(
-          //   MaterialPageRoute(builder: (context) => const HomePage()),
-          // );
+          Navigator.pushNamed(
+            context,
+            '/home',
+          );
         } else {
           // User is authenticated but not in Firestore
           await auth.signOut();
