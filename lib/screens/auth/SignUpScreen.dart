@@ -50,7 +50,7 @@ class _SignupScreenState extends State<SignupScreen> {
           'Registration',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: const Color.fromARGB(255, 60, 4, 213),
+        backgroundColor: Color.fromARGB(255, 105, 6, 100),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
@@ -86,7 +86,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           Image.asset(
                             'assets/images/logo.png',
                             height: 100,
-                            color: const Color.fromARGB(255, 60, 4, 213),
+                            color: Color.fromARGB(255, 105, 6, 100),
                           ),
                           const SizedBox(height: 16),
                           const Text(
@@ -94,7 +94,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 60, 4, 213),
+                              color: Color.fromARGB(255, 105, 6, 100),
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -117,8 +117,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                           });
                                         },
                                         style: ElevatedButton.styleFrom(
-                                          backgroundColor: const Color.fromARGB(
-                                              255, 60, 4, 213),
+                                          backgroundColor:
+                                              Color.fromARGB(255, 105, 6, 100),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(30),
@@ -153,8 +153,8 @@ class _SignupScreenState extends State<SignupScreen> {
                                         }
                                       },
                                       style: ElevatedButton.styleFrom(
-                                        backgroundColor: const Color.fromARGB(
-                                            255, 60, 4, 213),
+                                        backgroundColor:
+                                            Color.fromARGB(255, 105, 6, 100),
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(30),
@@ -181,9 +181,10 @@ class _SignupScreenState extends State<SignupScreen> {
                           if (_currentStep == _totalSteps - 1)
                             ElevatedButton(
                               style: ButtonStyle(
-                                  backgroundColor: MaterialStateProperty.all<
-                                          Color>(
-                                      const Color.fromARGB(255, 60, 4, 213))),
+                                  backgroundColor:
+                                      MaterialStateProperty.all<Color>(
+                                Color.fromARGB(255, 105, 6, 100),
+                              )),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/login');
                               },

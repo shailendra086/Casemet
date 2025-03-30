@@ -30,8 +30,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final LinearGradient socialGradient = const LinearGradient(
     colors: [
-      Color.fromARGB(255, 60, 4, 213),
-      Color.fromARGB(255, 37, 6, 105),
+      Color.fromARGB(255, 175, 4, 213),
+      Color.fromARGB(255, 105, 6, 100),
     ],
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
@@ -69,8 +69,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Color.fromARGB(255, 60, 4, 213),
-                          Color.fromARGB(255, 37, 6, 105)
+                          Color.fromARGB(255, 175, 4, 213),
+                          Color.fromARGB(255, 105, 6, 100),
                         ],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
@@ -126,8 +126,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   ShaderMask(
                     shaderCallback: (bounds) => const LinearGradient(
                       colors: [
-                        Color.fromARGB(255, 60, 4, 213),
-                        Color.fromARGB(255, 37, 6, 105),
+                        Color.fromARGB(255, 175, 4, 213),
+                        Color.fromARGB(255, 105, 6, 100),
                       ],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
@@ -212,8 +212,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(
                             colors: [
-                              Color.fromARGB(255, 60, 4, 213),
-                              Color.fromARGB(255, 37, 6, 105)
+                              Color.fromARGB(255, 175, 4, 213),
+                              Color.fromARGB(255, 105, 6, 100),
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
@@ -495,8 +495,6 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 }
-
-// import 'package:flutter/material.dart';
 
 class WaveClipper extends CustomClipper<Path> {
   @override

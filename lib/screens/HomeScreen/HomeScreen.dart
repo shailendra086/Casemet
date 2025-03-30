@@ -1,6 +1,9 @@
 import 'package:casemet/provider/theme.dart';
 import 'package:casemet/screens/HomeScreen/BottomNaviagtion.dart';
+import 'package:casemet/screens/HomeScreen/DrawerHomePage.dart';
+import 'package:casemet/screens/HomeScreen/LiveAdvoates.dart';
 import 'package:casemet/screens/HomeScreen/Notification.dart';
+import 'package:casemet/screens/HomeScreen/TopAdvocates.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -143,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
             )
         ],
       ),
-      // drawer: const DrawerHomeScreen(),
+      drawer: const DrawerHomePage(),
       body: Container(
         color: themeData.isDarkMode ? Colors.black : Colors.white,
         child: SingleChildScrollView(
@@ -247,7 +250,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-                // const TopAdvocates(),
+                const TopAdvocates(),
 
                 // Vakil Logo Section
                 Text(translate('Vakil Logo', 'वकील लोगो'),
@@ -291,10 +294,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         )),
                     const Spacer(),
                     TextButton(
-                      onPressed: () {
-                        // Navigator.of(context).push(MaterialPageRoute(
-                        //     builder: (context) => const LiveWakeels()));
-                      },
+                      onPressed: () {},
                       child: Text(translate('View All', 'सभी देखें'),
                           style: TextStyle(
                             color: themeData.isDarkMode
@@ -305,7 +305,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 const SizedBox(height: 10),
-                // const LiveAdvocates(),
+                const LiveAdvocates(),
                 const SizedBox(height: 20),
 
                 // Other Services Section with Cards

@@ -1,4 +1,5 @@
 import 'package:casemet/provider/theme.dart';
+import 'package:casemet/screens/auth/LoginScreen.dart';
 import 'package:casemet/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,6 @@ class _DrawerHomePageState extends State<DrawerHomePage> {
     {'icon': Icons.person, 'title': 'Contact Us'},
     {'icon': Icons.settings, 'title': 'Settings'},
     {'icon': Icons.privacy_tip, 'title': 'Privacy Policies'},
-    {'icon': Icons.payment, 'title': 'Payments'},
     {'icon': Icons.work, 'title': 'Services'},
     {'icon': Icons.gavel, 'title': 'Terms and Conditions'},
     {'icon': Icons.help, 'title': 'Help and Support'},
@@ -118,8 +118,8 @@ class _DrawerHomePageState extends State<DrawerHomePage> {
                   // Navigator.of(context).push(MaterialPageRoute(
                   //     builder: (context) => Customersupport()));
                 } else if (item['title'] == 'Logout') {
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //     builder: (context) => const LoginScreen()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const LoginScreen()));
                 }
               },
             );
