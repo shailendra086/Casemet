@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "847956588375",
+    "project_id": "casemet-9f5f5",
+    "storage_bucket": "casemet-9f5f5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847956588375:android:c0037de84be3f5a6967012",
+        "android_client_info": {
+          "package_name": "com.example.casemet_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp-C7GWQUNjt9PX8s3tMXKBR7o2xrcVPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,51 @@
+import 'package:casemet/provider/theme.dart';
+import 'package:casemet/screens/ForgotScreen.dart';
+import 'package:casemet/screens/LoginScreen.dart';
+import 'package:casemet/screens/Notification.dart';
+import 'package:casemet/screens/SplashScreen.dart';
+import 'package:casemet/services/notification_service.dart';
+import 'package:casemet/wrapper.dart';
+import 'package:flutter/material.dart';
+
+import 'package:firebase_core/firebase_core.dart';
+
+import 'package:provider/provider.dart';
+
+void main() async {
+  WidgetsFlutterBinding
+      .ensureInitialized(); // Ensure proper binding for Firebase
+  await Firebase.initializeApp(); // Initialize Firebase
+
+  // init Notification
+  NotificationService().initNotification();
+  runApp(ChangeNotifierProvider(
+      create: (_) => ThemeProviderState(), child: const MyApp()));
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(brightness: Brightness.light),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      themeMode: ThemeMode.system,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/wrapper': (context) => const Wrapper(),
+        '/login': (context) => const LoginScreen(),
+        '/notification': (context) => const NotificationPage(),
+        '/forget': (context) => const ForgotScreen(),
+      },
+      home: const SplashScreen(),
+    );
+  }
+}
