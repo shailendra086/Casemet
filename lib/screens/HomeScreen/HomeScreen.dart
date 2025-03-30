@@ -3,7 +3,11 @@ import 'package:casemet/screens/HomeScreen/BottomNaviagtion.dart';
 import 'package:casemet/screens/HomeScreen/DrawerHomePage.dart';
 import 'package:casemet/screens/HomeScreen/LiveAdvoates.dart';
 import 'package:casemet/screens/HomeScreen/Notification.dart';
+import 'package:casemet/screens/HomeScreen/Services.dart';
+import 'package:casemet/screens/HomeScreen/SocialMediaIcons.dart';
 import 'package:casemet/screens/HomeScreen/TopAdvocates.dart';
+import 'package:casemet/screens/HomeScreen/TopLegalTrends.dart';
+import 'package:casemet/screens/HomeScreen/TopLegalTrends/TopLegal.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -205,8 +209,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     const Spacer(),
                     TextButton(
                       onPressed: () {
-                        // Navigator.of(context).push(MaterialPageRoute(
-                        //     builder: (context) => TopLegal()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => TopLegal()));
                       },
                       child: Text(translate('View All', 'सभी देखें'),
                           style: TextStyle(
@@ -217,7 +221,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-                // const TopLegalTrends(),
+                const TopLegalTrends(),
 
                 // Top Advocates
                 const SizedBox(height: 2),
@@ -318,12 +322,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           : Colors.black,
                     )),
                 const SizedBox(height: 10),
-                // const OtherServices(),
+                Container(
+                    height: MediaQuery.of(context).size.height * 0.9,
+                    child: ServicesPage()),
 
                 const SizedBox(height: 20),
 
                 // Add social media icons with their links
-                // SocialMediaIcons(isHindi: _isHindi),
+                SocialMediaIcons(isHindi: _isHindi),
               ],
             ),
           ),

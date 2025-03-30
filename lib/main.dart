@@ -1,6 +1,8 @@
 import 'package:casemet/provider/theme.dart';
 import 'package:casemet/screens/HomeScreen/HomeScreen.dart';
 import 'package:casemet/screens/HomeScreen/LiveAdvoates.dart';
+import 'package:casemet/screens/HomeScreen/LiveWakeels.dart';
+import 'package:casemet/screens/HomeScreen/TopAdvocates.dart';
 import 'package:casemet/screens/auth/ForgotScreen.dart';
 import 'package:casemet/screens/auth/LoginScreen.dart';
 import 'package:casemet/screens/HomeScreen/Notification.dart';
@@ -49,9 +51,10 @@ class _MyAppState extends State<MyApp> {
         '/mobileverfication': (context) => const Mobileverfication (),
         '/forget': (context) => const ForgotScreen(),
         '/home': (context) => const HomeScreen(),
-        '/toplegal': (context) => const HomeScreen(),
-        '/topadvocate': (context) => const HomeScreen(),
+        // '/toplegal': (context) => const TopAdvocates(),
+        '/topadvocate': (context) => const TopAdvocates(),
         '/liveadvocates': (context) => const LiveAdvocates(),
+        '/live': (context) => const LiveWakeels(),
       },
     );
   }
