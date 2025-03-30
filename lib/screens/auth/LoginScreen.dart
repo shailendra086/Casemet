@@ -147,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   // Username field
                   _buildTextField(
                     controller: _usernameController,
-                    hint: 'Username',
+                    hint: 'Username/Mobile ',
                     icon: Icons.person,
                     keyboardType: TextInputType.emailAddress,
                   ),
@@ -173,10 +173,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             onChanged: (bool? val) {
                               setState(() {
                                 _rememberMe = val ?? false;
+                                Navigator.pushNamed(context, '/mobileverfication');
                               });
                             },
                           ),
-                          const Text('Remember me'),
+                          const Text('Login Using OTP'),
                         ],
                       ),
                       TextButton(
