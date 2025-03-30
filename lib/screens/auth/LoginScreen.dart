@@ -147,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   // Username field
                   _buildTextField(
                     controller: _usernameController,
-                    hint: 'Username',
+                    hint: 'Username/Mobile ',
                     icon: Icons.person,
                     keyboardType: TextInputType.emailAddress,
                   ),
@@ -173,11 +173,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             onChanged: (bool? val) {
                               setState(() {
                                 _rememberMe = val ?? false;
+
                                 Navigator.pushNamed(context, '/mobile');
                               });
                             },
                           ),
-                          const Text('Login with mobile'),
+                        
+                     
+
                         ],
                       ),
                       TextButton(
