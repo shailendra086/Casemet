@@ -140,17 +140,13 @@ class _SignupScreenState extends State<SignupScreen> {
                                   : ElevatedButton(
                                       onPressed: () async {
                                         if (_currentStep < _totalSteps - 2) {
-                                          // Advance to the next step
                                           setState(() {
                                             _currentStep++;
                                           });
                                         } else if (_currentStep ==
                                             _totalSteps - 2) {
-                                          // On step 5 (index 4), process sign-up
                                           await signUp();
-                                        } else {
-                                          // Do nothing on Thank You step
-                                        }
+                                        } else {}
                                       },
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor:

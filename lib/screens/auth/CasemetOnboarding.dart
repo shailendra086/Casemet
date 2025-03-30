@@ -37,14 +37,14 @@ class WaveClipper extends CustomClipper<Path> {
 }
 
 // 2. Main screen
-class OnlineKachehariLoginScreen extends StatelessWidget {
-  const OnlineKachehariLoginScreen({Key? key}) : super(key: key);
+class CaseMetLoginScreen extends StatelessWidget {
+  const CaseMetLoginScreen({Key? key}) : super(key: key);
 
   // Define the gradient to use for the social icons' background
   final LinearGradient socialGradient = const LinearGradient(
     colors: [
-      Color.fromARGB(255, 60, 4, 213),
-      Color.fromARGB(255, 37, 6, 105),
+      Color.fromARGB(255, 175, 4, 213),
+      Color.fromARGB(255, 105, 6, 100),
     ],
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
@@ -55,230 +55,228 @@ class OnlineKachehariLoginScreen extends StatelessWidget {
     return Scaffold(
       // White background
       backgroundColor: Colors.white,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              // Wave-shaped gradient header
-              Stack(
-                children: [
-                  ClipPath(
-                    clipper: WaveClipper(),
-                    child: Container(
-                      height: 280,
-                      width: double.infinity,
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 60, 4, 213),
-                            Color.fromARGB(255, 37, 6, 105)
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // Wave-shaped gradient header
+            Stack(
+              children: [
+                ClipPath(
+                  clipper: WaveClipper(),
+                  child: Container(
                     height: 280,
                     width: double.infinity,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/logo.png',
-                          height: 80,
-                        ),
-                        const SizedBox(height: 8),
-                        const Text(
-                          'Case Met',
-                          style: TextStyle(
-                            fontSize: 26,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        const Text(
-                          'आपका अधिकार, आपकी आवाज़',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-
-              const SizedBox(height: 30),
-
-              // "Welcome!"
-              ShaderMask(
-                shaderCallback: (bounds) => const LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 60, 4, 213),
-                    Color.fromARGB(255, 37, 6, 105),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ).createShader(bounds),
-                child: const Text(
-                  'Welcome !',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors
-                        .white, // This color will be masked by the gradient
-                  ),
-                ),
-              ),
-
-              const SizedBox(height: 40),
-
-              // "Create Account" and "Login" buttons
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32.0),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 40,
-                    ),
-                    // Create Account (gradient) button
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SignupScreen()));
-                        },
-                        style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(vertical: 0),
-                          // shape: RoundedRectangleBorder(
-                          //   borderRadius: BorderRadius.circular(0),
-                          // ),
-                          // // Set background to transparent and use Ink widget for gradient
-                          // backgroundColor: Colors.transparent,
-                          // shadowColor: Colors.transparent,
-                          // elevation: 2,
-                        ),
-                        child: Ink(
-                          decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                              colors: [
-                                Color.fromARGB(255, 60, 4, 213),
-                                Color.fromARGB(255, 37, 6, 105)
-                              ],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                            ),
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Container(
-                            alignment: Alignment.center,
-                            constraints: const BoxConstraints(minHeight: 50),
-                            child: const Text(
-                              'Create Account',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 175, 4, 213),
+                          Color.fromARGB(255, 105, 6, 100),
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
                       ),
                     ),
-
-                    const SizedBox(height: 10),
-
-                    // Login (outlined) button
-                    SizedBox(
-                      width: double.infinity,
-                      child: OutlinedButton(
-                        onPressed: () {
-                          // TODO: Navigate to login flow
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => LoginScreen()));
-                        },
-                        style: OutlinedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(vertical: 14),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          side: const BorderSide(color: Colors.deepPurple),
-                        ),
-                        child: const Text(
-                          'Login',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.bold,
-                          ),
+                  ),
+                ),
+                SizedBox(
+                  height: 280,
+                  width: double.infinity,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/logo.png',
+                        height: 80,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        'Case Met',
+                        style: TextStyle(
+                          fontSize: 26,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 8),
+                      const Text(
+                        'आपका अधिकार, आपकी आवाज़',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
+              ],
+            ),
 
-              const SizedBox(height: 40),
+            const SizedBox(height: 30),
 
-              // Social icons row using Font Awesome icons with gradient circular background
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Twitter
-                  _buildSocialIconButton(
-                    icon: FontAwesomeIcons.twitter,
-                    iconSize: 26,
-                    onPressed: () {
-                      // TODO: Twitter sign-in
-                    },
-                  ),
-                  const SizedBox(width: 12),
-                  // LinkedIn
-                  _buildSocialIconButton(
-                    icon: FontAwesomeIcons.linkedinIn,
-                    iconSize: 24,
-                    onPressed: () {
-                      // TODO: LinkedIn sign-in
-                    },
-                  ),
-                  const SizedBox(width: 12),
-                  // Facebook
-                  _buildSocialIconButton(
-                    icon: FontAwesomeIcons.facebookF,
-                    iconSize: 25,
-                    onPressed: () {
-                      // TODO: Facebook sign-in
-                    },
-                  ),
-                  const SizedBox(width: 12),
-                  // Google
-                  _buildSocialIconButton(
-                    icon: FontAwesomeIcons.google,
-                    iconSize: 25,
-                    onPressed: () {
-                      // TODO: Google sign-in
-                    },
-                  ),
+            // "Welcome!"
+            ShaderMask(
+              shaderCallback: (bounds) => const LinearGradient(
+                colors: [
+                  Color.fromARGB(255, 175, 4, 213),
+                  Color.fromARGB(255, 105, 6, 100),
                 ],
-              ),
-
-              const SizedBox(height: 10),
-              const Text(
-                'Sign in with another account',
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ).createShader(bounds),
+              child: const Text(
+                'Welcome !',
                 style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color:
+                      Colors.white, // This color will be masked by the gradient
                 ),
               ),
-              const SizedBox(height: 40),
-            ],
-          ),
+            ),
+
+            const SizedBox(height: 40),
+
+            // "Create Account" and "Login" buttons
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32.0),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 40,
+                  ),
+                  // Create Account (gradient) button
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => SignupScreen()));
+                      },
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 0),
+                        // shape: RoundedRectangleBorder(
+                        //   borderRadius: BorderRadius.circular(0),
+                        // ),
+                        // // Set background to transparent and use Ink widget for gradient
+                        // backgroundColor: Colors.transparent,
+                        // shadowColor: Colors.transparent,
+                        // elevation: 2,
+                      ),
+                      child: Ink(
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color.fromARGB(255, 175, 4, 213),
+                              Color.fromARGB(255, 105, 6, 100),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: Container(
+                          alignment: Alignment.center,
+                          constraints: const BoxConstraints(minHeight: 50),
+                          child: const Text(
+                            'Create Account',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 10),
+
+                  // Login (outlined) button
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                      onPressed: () {
+                        // TODO: Navigate to login flow
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => LoginScreen()));
+                      },
+                      style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        side: const BorderSide(color: Colors.deepPurple),
+                      ),
+                      child: const Text(
+                        'Login',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.deepPurple,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 40),
+
+            // Social icons row using Font Awesome icons with gradient circular background
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Twitter
+                _buildSocialIconButton(
+                  icon: FontAwesomeIcons.twitter,
+                  iconSize: 26,
+                  onPressed: () {
+                    // TODO: Twitter sign-in
+                  },
+                ),
+                const SizedBox(width: 12),
+                // LinkedIn
+                _buildSocialIconButton(
+                  icon: FontAwesomeIcons.linkedinIn,
+                  iconSize: 24,
+                  onPressed: () {
+                    // TODO: LinkedIn sign-in
+                  },
+                ),
+                const SizedBox(width: 12),
+                // Facebook
+                _buildSocialIconButton(
+                  icon: FontAwesomeIcons.facebookF,
+                  iconSize: 25,
+                  onPressed: () {
+                    // TODO: Facebook sign-in
+                  },
+                ),
+                const SizedBox(width: 12),
+                // Google
+                _buildSocialIconButton(
+                  icon: FontAwesomeIcons.google,
+                  iconSize: 25,
+                  onPressed: () {
+                    // TODO: Google sign-in
+                  },
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 10),
+            const Text(
+              'Sign in with another account',
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.grey,
+              ),
+            ),
+            const SizedBox(height: 40),
+          ],
         ),
       ),
     );

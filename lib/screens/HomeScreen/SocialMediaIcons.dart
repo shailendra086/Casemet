@@ -102,7 +102,7 @@ class _SocialMediaIconsState extends State<SocialMediaIcons> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '© 2024-25 Online Kachehari. All Rights Reserved.',
+              '© 2024-25 Case Met. All Rights Reserved.',
               style: TextStyle(
                 fontSize: 12,
                 color: themeData.isDarkMode

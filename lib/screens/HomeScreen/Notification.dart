@@ -1,4 +1,5 @@
 import 'package:casemet/provider/theme.dart';
+import 'package:casemet/screens/profile/UserProfile.dart';
 import 'package:casemet/services/notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -166,9 +167,9 @@ class _NotificationPageState extends State<NotificationPage> {
                       builder: (context) => const NotificationPage()));
               break;
             case 4:
-            // Navigator.push(context,
-            //     MaterialPageRoute(builder: (context) => const UserProfile()));
-            // break;
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const UserProfile()));
+              break;
           }
         },
         items: const [
