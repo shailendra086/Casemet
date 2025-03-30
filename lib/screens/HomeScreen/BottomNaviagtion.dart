@@ -70,9 +70,8 @@ class _BottomNaviagtionState extends State<BottomNaviagtion> {
             );
             break;
           case 4:
-            // Navigator.of(context).push(
-            //   MaterialPageRoute(builder: (context) => UserProfile()),
-            // );
+            Navigator.pushNamed(context, '/profile');
+
             break;
         }
       },

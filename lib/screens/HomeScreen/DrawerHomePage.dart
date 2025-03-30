@@ -1,5 +1,14 @@
 import 'package:casemet/provider/theme.dart';
+import 'package:casemet/screens/HomeScreen/Drawer/AboutUsScreen.dart';
+import 'package:casemet/screens/HomeScreen/Drawer/ContactUs.dart';
+import 'package:casemet/screens/HomeScreen/Drawer/CustomerSupport.dart';
+import 'package:casemet/screens/HomeScreen/Drawer/Policy.dart';
+import 'package:casemet/screens/HomeScreen/Drawer/TermsConditions.dart';
+import 'package:casemet/screens/HomeScreen/Drawer/TrendingBlogs.dart';
+import 'package:casemet/screens/HomeScreen/Services.dart';
 import 'package:casemet/screens/auth/LoginScreen.dart';
+import 'package:casemet/screens/profile/Settings.dart';
+import 'package:casemet/screens/profile/UserProfile.dart';
 import 'package:casemet/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +29,7 @@ class _DrawerHomePageState extends State<DrawerHomePage> {
     {'icon': Icons.person, 'title': 'Contact Us'},
     {'icon': Icons.settings, 'title': 'Settings'},
     {'icon': Icons.privacy_tip, 'title': 'Privacy Policies'},
-    {'icon': Icons.work, 'title': 'Services'},
+    // {'icon': Icons.work, 'title': 'Services'},
     {'icon': Icons.gavel, 'title': 'Terms and Conditions'},
     {'icon': Icons.help, 'title': 'Help and Support'},
     {'icon': Icons.logout, 'title': 'Logout'},
@@ -70,7 +79,7 @@ class _DrawerHomePageState extends State<DrawerHomePage> {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  user['name'] ?? 'Online Kachehari',
+                  user['name'] ?? 'CaseMet',
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -89,37 +98,33 @@ class _DrawerHomePageState extends State<DrawerHomePage> {
               title: Text(item['title']),
               onTap: () {
                 if (item['title'] == 'Profile') {
-                  // Navigator.of(context)
-                  //     .push(MaterialPageRoute(builder: (context) => Profile()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => UserProfile()));
                 } else if (item['title'] == 'Blog') {
-                  // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (context) => TrendingBlogs()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => TrendingBlogs()));
                 } else if (item['title'] == 'About Us') {
-                  // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (context) => AboutUsScreen()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => AboutUsScreen()));
                 } else if (item['title'] == 'Contact Us') {
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //     builder: (context) => const ContactUs()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ContactUs()));
                 } else if (item['title'] == 'Settings') {
-                  // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (context) => SettingsPage()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SettingsPage()));
                 } else if (item['title'] == 'Privacy Policies') {
-                  // Navigator.of(context).push(
-                  //     MaterialPageRoute(builder: (context) => const Policy()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const Policy()));
                 } else if (item['title'] == 'Payments') {
                   // Add navigation to payments page
-                } else if (item['title'] == 'Services') {
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //     builder: (context) => const ServicesPage()));
                 } else if (item['title'] == 'Terms and Conditions') {
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //     builder: (context) => const TermsConditions()));
-                } else if (item['title'] == 'Help and Support') {
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //     builder: (context) => Customersupport()));
-                } else if (item['title'] == 'Logout') {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const LoginScreen()));
+                      builder: (context) => const TermsConditions()));
+                } else if (item['title'] == 'Help and Support') {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Customersupport()));
+                } else if (item['title'] == 'Logout') {
+                  Navigator.pushNamed(context, '/login');
                 }
               },
             );

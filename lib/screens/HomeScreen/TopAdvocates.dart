@@ -120,7 +120,7 @@ class _TopAdvocatesState extends State<TopAdvocates> {
                               color: Colors.deepPurple[100],
                               borderRadius: BorderRadius.circular(5)),
                           padding: EdgeInsets.fromLTRB(38, 2, 38, 2),
-                          child: const Text('₹500',
+                          child: const Text('₹99',
                               style: TextStyle(
                                 fontSize: 15,
                                 color: Colors.deepPurple,

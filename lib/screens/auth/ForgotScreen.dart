@@ -33,8 +33,8 @@ class _ForgotScreenState extends State<ForgotScreen> {
                     decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          Color.fromARGB(255, 60, 4, 213),
-                          Color.fromARGB(255, 37, 6, 105)
+                          Color.fromARGB(255, 175, 4, 213),
+                          Color.fromARGB(255, 105, 6, 100),
                         ],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
@@ -90,6 +90,8 @@ class _ForgotScreenState extends State<ForgotScreen> {
                   ShaderMask(
                     shaderCallback: (bounds) => const LinearGradient(
                       colors: [
+                        Color.fromARGB(255, 175, 4, 213),
+                        Color.fromARGB(255, 105, 6, 100),
                         Color.fromARGB(255, 60, 4, 213),
                         Color.fromARGB(255, 37, 6, 105)
                       ],
@@ -128,8 +130,8 @@ class _ForgotScreenState extends State<ForgotScreen> {
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(
                             colors: [
-                              Color.fromARGB(255, 60, 4, 213),
-                              Color.fromARGB(255, 37, 6, 105)
+                              Color.fromARGB(255, 175, 4, 213),
+                              Color.fromARGB(255, 105, 6, 100),
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,

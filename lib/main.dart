@@ -3,10 +3,14 @@ import 'package:casemet/screens/HomeScreen/HomeScreen.dart';
 import 'package:casemet/screens/HomeScreen/LiveAdvoates.dart';
 import 'package:casemet/screens/HomeScreen/LiveWakeels.dart';
 import 'package:casemet/screens/HomeScreen/TopAdvocates.dart';
+import 'package:casemet/screens/auth/CasemetOnboarding.dart';
 import 'package:casemet/screens/auth/ForgotScreen.dart';
 import 'package:casemet/screens/auth/LoginScreen.dart';
 import 'package:casemet/screens/HomeScreen/Notification.dart';
+
 import 'package:casemet/screens/auth/SplashScreen.dart';
+import 'package:casemet/screens/profile/Settings.dart';
+import 'package:casemet/screens/profile/UserProfile.dart';
 import 'package:casemet/services/notification_service.dart';
 import 'package:casemet/wrapper.dart';
 import 'package:flutter/material.dart';
@@ -44,15 +48,18 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
+        '/onboarding': (context) => const CaseMetLoginScreen(),
         '/wrapper': (context) => const Wrapper(),
         '/login': (context) => const LoginScreen(),
         '/notification': (context) => const NotificationPage(),
         '/forget': (context) => const ForgotScreen(),
         '/home': (context) => const HomeScreen(),
-        // '/toplegal': (context) => const TopAdvocates(),
         '/topadvocate': (context) => const TopAdvocates(),
         '/liveadvocates': (context) => const LiveAdvocates(),
         '/live': (context) => const LiveWakeels(),
+        '/profile': (context) => const UserProfile(),
+        '/setting': (context) => const SettingsPage(),
+        // '/mobile': (context) => const MobileAuthScreen(),
       },
     );
   }

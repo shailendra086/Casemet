@@ -173,10 +173,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             onChanged: (bool? val) {
                               setState(() {
                                 _rememberMe = val ?? false;
+                                Navigator.pushNamed(context, '/mobile');
                               });
                             },
                           ),
-                          const Text('Remember me'),
+                          const Text('Login with mobile'),
                         ],
                       ),
                       TextButton(
