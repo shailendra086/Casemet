@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
         '/notification': (context) => const NotificationPage(),
         '/forget': (context) => const ForgotScreen(),
       },
-      home: const SplashScreen(),
+      // home: const SplashScreen(),
     );
   }
 }
